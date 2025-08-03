@@ -1,4 +1,5 @@
 #!/bin/bash
+#!/bin/sh
 find . -type f -iname "*.gif" -execdir sh -c 'while [ "$#" -gt 0 ]
 do printf "%s\n" "${1%.*}"
 shift
