@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -iname "*.gif" -execdir sh -c 'while [ "$#" -gt 0 ]; do printf "%s\n" "${1##*/}" | cut -d. -f1; shift; done' sh {} + | sort -f
+find . -type f -iname "*.gif" -execdir sh -c 'while [ "$#" -gt 0 ]; do printf "%s\n" "${1##*/}" | rev | cut -d. -f2- | rev; shift; done' sh {} + | sort -f
